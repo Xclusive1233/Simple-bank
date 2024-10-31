@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Summary - Community Savings Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="logo.png.webp" alt="Community Savings Bank Logo" class="logo">
+            <nav>
+                <a href="#">Accounts</a>
+                <a href="#">Brokerage</a>
+                <button class="dropdown-button" onclick="toggleDropdown()">Transfer & Pay</button>
+                <a href="#">Plan & Learn</a>
+                <a href="#">Security & Support</a>
+            </nav>
+            <div class="user-info">
+                <p><a href="index.html">Sign Off</a>
+                <span>Welcome, Charles</span></p>
+            </div>
+        </div>
+        <!-- Dropdown menu for Transfer & Pay -->
+        <div class="dropdown-menu" id="transfer-pay-menu">
+            <a href="#">Zelle</a>
+            <a href="#">Bill Pay</a>
+            <a href="#">Transfer to External Account</a>
+        </div>
+    </header>
+
+    <main class="account-summary">
+    
+
+        <section class="account-overview">
+            <h2>Account Summary</h2>
+            <!-- Everyday Checking Account Section -->
+            <div class="account" onclick="toggleDetails('checking-details')">
+                <div class="account-type">
+                    <span class="icon">&#128179;</span>
+                    <span>EVERYDAY CHECKING</span>
+                </div>
+                <div class="account-balance">
+                    <span>$25,873.00</span>
+                    <p>Available balance</p>
+                </div>
+                <!-- Transaction Details for Checking -->
+                <div class="account-details" id="checking-details">
+                    <p><strong>Pending Transactions:</strong></p>
+                    <p>IRS TREAS 310 TAX REF 042920 XXXXXXXX00<br>11/05/24 - <span class="credit">$25,873.00</span></p>
+                </div>
+            </div>
+
+            <!-- Platinum Savings Account Section -->
+            <div class="account" onclick="toggleDetails('savings-details')">
+                <div class="account-type">
+                    <span class="icon">&#128181;</span>
+                    <span>PLATINUM SAVINGS</span>
+                </div>
+                <div class="account-balance">
+                    <span class="negative">-$5,300.00</span>
+                    <p>Available balance</p>
+                </div>
+                <!-- Transaction Details for Savings -->
+                <div class="account-details" id="savings-details">
+                    <p><strong>Pending Transactions:</strong></p>
+                    <p>CBS LOAN<br>05/02/23 - <span class="debit">-$5,300.00</span></p>
+                </div>
+            </div>
+   <!-- Account Hold Notice -->
+<div class="account-hold-notice">
+    <span class="alert-icon">&#9888;</span> <!-- Unicode Warning Icon -->
+    <p>Your account is on hold until you pay your balance due to restore your checking accounts. You can no longer make transfers or make changes to your account. PLEASE CONTACT SUPPORT THROUGH THEIR EMAIL ATTANDSUP@GMAIL.COM FOR HELP!!!</p>
+</div>
+        </section>
+
+        <!-- Promo Sidebar -->
+        <aside class="promo-sidebar">
+            <div class="promo">
+                <h3>Earn 2% cash back</h3>
+                <p>on purchases with the Active Cash® card</p>
+            </div>
+            <div class="promo">
+                <h3>Stock Fractions</h3>
+                <p>Start investing with just $10</p>
+            </div>
+            <div class="promo">
+                <h3>Check your rate</h3>
+                <p>Get your mortgage rate quote in minutes</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Community Savings Bank. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.classList.toggle("visible");
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('transfer-pay-menu');
+            dropdown.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

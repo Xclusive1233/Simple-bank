@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Savings Bank - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index-login.js"></script> <!-- Link to JavaScript for login validation -->
+</head>
+<body>
+    <header>
+        <img src="logo.png.webp" alt="Community Savings Bank Logo" class="logo">
+        <nav>
+            <a href="index.html" class="active">Personal</a>
+            <a href="#">Investing & Wealth Management</a>
+            <a href="#">Small Business</a>
+            <a href="#">Commercial Banking</a>
+        </nav>
+    </header>
+    
+    <main class="home-content">
+        <div class="login-section">
+            <h2>View Your Accounts</h2>
+            <form id="loginForm"> <!-- Removed action for JavaScript validation -->
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <label>
+                    <input type="checkbox"> Save username
+                </label>
+                <button type="button" id="signOnButton">Sign On</button> <!-- Button triggers JavaScript -->
+            </form>
+            <p><a href="#">Forgot Password/Username?</a></p>
+            <p><a href="#">Enroll Now</a> | <a href="#">Security Center</a></p>
+        </div>
+        
+        <div class="promo-section">
+            <div class="promo-slide">
+                <h3>0% intro APR for up to 21 months</h3>
+                <p>with $0 annual fee. Terms apply.</p>
+                <a href="#">Learn more ></a>
+            </div>
+        </div>
+        
+        <div class="quick-links">
+            <div class="link">
+                <p>Find your credit card</p>
+            </div>
+            <div class="link">
+                <p>Simplify life: Everyday Checking</p>
+            </div>
+            <div class="link">
+                <p>Free online budgeting tools</p>
+            </div>
+            <div class="link">
+                <p>Make an appointment</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
